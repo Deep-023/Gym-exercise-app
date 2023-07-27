@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { Button, Stack, Typography } from '@mui/material';
 
 const ExerciseCard = ({key, exercise}) => {
- if(!exercise.length) return 'loading...'
   return (
     <Link className="exercise-card" to={`/exercises/${exercise.id}`}>
         <img src={exercise.gifUrl} alt={exercise.name} loading='lazy'/>

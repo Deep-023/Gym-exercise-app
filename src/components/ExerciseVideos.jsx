@@ -4,6 +4,7 @@ import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu';
 import VideoPlayer from './VideoPlayer'
 import RightArrowIcon from '../assests/icons/right-arrow.png';
 import LeftArrowIcon from '../assests/icons/left-arrow.png';
+import Loader from './Loader'
 
 const LeftArrow = () => {
     const { scrollPrev } = useContext(VisibilityContext);
@@ -26,7 +27,7 @@ const RightArrow = () => {
 };
 
 const ExerciseVideos = ({ exerciseVideos, name }) => {
-    if (!exerciseVideos.length) return 'loading...'
+    if (!exerciseVideos?.length) return <Loader/>
     return (
         <Box sx={{ marginTop: { lg: '100px', xs: '20px' } }} p='20px'>
             <Typography variant="h3" mb="33px">

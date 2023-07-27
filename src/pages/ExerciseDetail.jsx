@@ -22,12 +22,11 @@ const ExerciseDetail = () => {
       const exerciseDetailData = await fetchData(`${exerciseDbUrl}/exercises/exercise/${id}`,exercisesOptions);
       setExerciseDetail(exerciseDetailData);
 
-      const exerciseVideosData = await fetchData(`${youtubeSearchUrl}/search?maxResults=10&query=${exerciseDetailData.name} exercise`,youtubeOptions);
+      const exerciseVideosData = await fetchData(`${youtubeSearchUrl}/search?maxResults=10&query=${exerciseDetailData.name}`,youtubeOptions);
       setExerciseVideos(exerciseVideosData.contents);
 
       const targetMuscleExercisesData = await fetchData(`${exerciseDbUrl}/exercises/target/${exerciseDetailData.target}`,exercisesOptions);
-      setTargetMuscleExercises(targetMuscleExercisesData)
-      console.log(targetMuscleExercises);
+      setTargetMuscleExercises(targetMuscleExercisesData);
 
       const equipmentExercisesData = await fetchData(`${exerciseDbUrl}/exercises/equipment/${exerciseDetailData.equipment}`,exercisesOptions);
       setEquipmentExercises(equipmentExercisesData)
