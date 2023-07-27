@@ -151,3 +151,10 @@ body {
       width: 280px;
     }
   }
+
+.bmi-calc{
+background: rgba(255, 240, 240, 0.15);
+box-shadow: 0 8px 32px 0 rgba(151, 156, 234, 0.221);
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+}
