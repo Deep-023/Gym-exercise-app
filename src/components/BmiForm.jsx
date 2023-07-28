@@ -15,14 +15,14 @@ const BmiForm = () => {
   }
 
   return (
-    <Box height="550px" width="450px" borderRadius="30px"
-      ml={30} p={4} className="bmi-calc"
+    <Box height={{lg:"500px", xs:"400px"}} width={{lg:"450px", xs:"280px"}} borderRadius="30px"
+      ml={{lg:30, xs:1}} p={4} className="bmi-calc"
     >
       <Typography textAlign="center" variant='h4' fontWeight={300} mb={5} mt={2}> Metric Units</Typography>
       <Box sx={{ mt: 3 }} display="flex" justifyContent="center" alignItems="center" flexDirection="column">
         <Grid container spacing={2}>
           <Grid item xs={3}>
-            <Typography variant='h5' mt={3}>Weight: </Typography>
+            <Typography fontSize={{lg:"25px", xs:"16px"}} mt={3}>Weight: </Typography>
           </Grid>
           <Grid item xs={9}>
             <TextField
@@ -38,7 +38,7 @@ const BmiForm = () => {
             />
           </Grid>
           <Grid item xs={3}>
-            <Typography variant='h5' mt={3}>Height: </Typography>
+            <Typography fontSize={{lg:"25px", xs:"16px"}} mt={3}>Height: </Typography>
           </Grid>
           <Grid item xs={9}>
             <TextField

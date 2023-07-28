@@ -5,7 +5,6 @@ import ExerciseCard from './ExerciseCard';
 
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
 
-  //if(!exercises.length) return 'loading...'
 
   const [currentPage, setCurrentPage] = useState(1);
   const exercisesPerPage = 9;
@@ -31,8 +30,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
       }
 
       fetchExerciseData();
-  },[bodyPart]);
-
+  },[bodyPart, setExercises]);
 
   return (
     <Box id="exercises"

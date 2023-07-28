@@ -11,7 +11,7 @@ const ExerciseDetail = () => {
   const [exerciseVideos, setExerciseVideos] = useState([]);
   const [exerciseDetail, setExerciseDetail] = useState({});
   const [targetMuscleExercises, setTargetMuscleExercises] = useState([]);
-  const [equipmentExercises, setEquipmentExercises] = useState([])
+  const [equipmentExercises, setEquipmentExercises] = useState([]);
   const {id} = useParams();
 
   useEffect(()=>{
@@ -29,7 +29,9 @@ const ExerciseDetail = () => {
       setTargetMuscleExercises(targetMuscleExercisesData);
 
       const equipmentExercisesData = await fetchData(`${exerciseDbUrl}/exercises/equipment/${exerciseDetailData.equipment}`,exercisesOptions);
-      setEquipmentExercises(equipmentExercisesData)
+      setEquipmentExercises(equipmentExercisesData);
+
+      
     }
     fetchExercisesData();
   },[id])

@@ -53,6 +53,12 @@ body {
     height: 742px;
     mix-blend-mode: multiply;
   }
+
+  .bmi-image{
+    mix-blend-mode: multiply;
+    height: 450px;
+    width: 750px;
+  }
   
   .hero-banner-img {
     position: absolute;
@@ -114,6 +120,12 @@ body {
   }
   
   @media screen and (max-width:1200px) {
+
+    .bmi-image{
+      width: 330px;
+      height: 250px;
+    }
+
     .detail-image {
       width: 300px;
       height: 300px;
@@ -157,4 +169,19 @@ background: rgba(255, 240, 240, 0.15);
 box-shadow: 0 8px 32px 0 rgba(151, 156, 234, 0.221);
 backdrop-filter: blur( 4px );
 -webkit-backdrop-filter: blur( 4px );
+}
+
+.custom-link::after{
+  content:"";
+  display: block;
+  height: 4px;
+  width: 100%;
+  transform: scaleX(0);
+  background-color: #FF2625;
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.custom-link:hover::after{
+  transform: scaleX(1);
 }

@@ -10,7 +10,7 @@ const Footer = () => {
         <img src={Logo} alt="logo" width="80px" height="60px" />
         <Typography variant='h4' pt={3.5} pl={2}>FitBit</Typography>
       </Stack>
-        <Typography variant='h5' pb="40px" >
+        <Typography variant='h5' pb="40px" textAlign="center">
           Made with 💝 by {"<Team.render/>"}
         </Typography>
       </Stack>
